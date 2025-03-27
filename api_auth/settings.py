@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'autenticacion',
+    'rest_framework.authtoken'
 ]
 
 MIDDLEWARE = [
@@ -110,6 +111,9 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',  # Requiere autenticación
     ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+          'rest_framework.authentication.TokenAuthentication',
+    ]
 }
 
 # Internationalization
