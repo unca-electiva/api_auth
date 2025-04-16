@@ -23,5 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api_auth.router')),
     path('api-auth/', include('rest_framework.urls')),
-    path('o/', include(oauth2_urls)),
+    path('oauth/', include(oauth2_urls, namespace='oauth2_provider')),
 ]
