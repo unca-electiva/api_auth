@@ -9,5 +9,4 @@ class AnuncioViewSet(viewsets.ModelViewSet):
     serializer_class = AnuncioSerializer
 
     def perform_create(self, serializer):
-        usuario = Usuario.objects.get(id=1)
-        serializer.save(publicado_por=usuario)
+        serializer.save(publicado_por=self.request.user)
