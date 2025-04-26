@@ -1,8 +1,7 @@
 from oauth2_provider.contrib.rest_framework import TokenHasReadWriteScope
 from rest_framework import viewsets
-from rest_framework.permissions import IsAuthenticated
 
-from autenticacion.models import Anuncio, Usuario
+from autenticacion.models import Anuncio
 from autenticacion.serializers import AnuncioSerializer
 
 
