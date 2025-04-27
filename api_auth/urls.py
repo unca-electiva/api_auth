@@ -17,11 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from oauth2_provider import urls as oauth2_urls
-
+from autenticacion.views import callback_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api_auth.router')),
+    path('callback/', callback_view, name='callback'),
     path('api-auth/', include('rest_framework.urls')),
     path('oauth/', include(oauth2_urls, namespace='oauth2_provider')),
 ]
