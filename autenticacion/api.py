@@ -3,6 +3,8 @@ from rest_framework import viewsets
 from autenticacion.models import Anuncio, Usuario
 from autenticacion.serializers import AnuncioSerializer
 
+from rest_framework.permissions import DjangoModelPermissions
+
 
 class AnuncioViewSet(viewsets.ModelViewSet):
     queryset = Anuncio.objects.all()
